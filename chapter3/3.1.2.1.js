@@ -15,4 +15,6 @@ function inconsistentRead(filename, cb) {
   }
 }
 
+export default inconsistentRead
+
 // 这个函数相当危险，有同步又有异步，会让调用方出现各种情况
