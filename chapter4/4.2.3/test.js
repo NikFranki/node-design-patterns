@@ -1,7 +1,7 @@
 function asyncOperation (cb) {
   process.nextTick(cb)
 }
-
+3
 function task1(cb) {
   asyncOperation(() => {
     task2(cb)
