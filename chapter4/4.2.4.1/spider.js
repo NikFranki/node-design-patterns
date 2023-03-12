@@ -62,7 +62,13 @@ function spiderLinks(currentUrl, body, nesting, cb) {
   links.forEach(link => spider(link, nesting - 1, done))
 }
 
+const spidering = new Set()
 export function spider(url, nesting, cb) {
+  if (spidering.has(url)) {
+    return process.nextTick(cb);
+  }
+
+  spidering.add(url)
   const filename = `${__dirname}/${urlToFilename(url)}`
   fs.readFile(filename, 'utf8', (err, fileContent) => {
     if (err) {
