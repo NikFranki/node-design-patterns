@@ -89,3 +89,15 @@ export function spider(url, nesting, cb) {
 // (2) iterate() 函数来迭代这些链接，接受 index 参数，判断是不是已经跟 links 数组的长度相等，如果是的话，就触发 cb() 函数，因为这意味着我们已经把 links 的所有条目处理完了
 // (3) 如果 index 与数组的长度不等，那么就开始处理它表示的这条链接，调用 spider() 函数，减少嵌套深度
 // (4) iterate() 写好之后，通过 iterate(0) 开始迭代
+
+// - spider
+//   - fs.readFile
+//     - isExist
+//       - download
+//         - spiderLinks
+//           - iterate
+//             - spider (递归执行)
+//     - notExist
+//       - spiderLinks
+//         - iterate
+//           - spider (递归执行)
