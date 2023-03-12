@@ -1,4 +1,4 @@
-import { spider } from './4.1.1.js'
+import { spider } from './4.2.js'
 
 spider(process.argv[2] || 'https://loige.co/', (err, filename, downloaded) => {
   if (err) {

@@ -6,7 +6,7 @@
   "configurations": [
   {
     "name": "Launch Program",
-    "program": "${workspaceFolder}/chapter4/4.1.1/4.1.1-cli.js",
+    "program": "${workspaceFolder}/chapter4/4.2/4.2-cli.js",
     "request": "launch",
     "skipFiles": [
       "<node_internals>/**"
