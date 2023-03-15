@@ -6,7 +6,7 @@
   "configurations": [
   {
     "name": "Launch Program",
-    "program": "${workspaceFolder}/chapter4/4.2.5.2.3/spider-cli.js",
+    "program": "${workspaceFolder}/chapter5/5.1.6/spider-cli.js",
     "request": "launch",
     "skipFiles": [
       "<node_internals>/**"
