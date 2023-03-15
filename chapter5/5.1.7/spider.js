@@ -35,11 +35,9 @@ function spiderLinks(currentUrl, content, nesting) {
   }
 
   const links = getPageLinks(currentUrl, content)
-  for (const link of links) { // (3)
-    promise = promise.then(() => spider(link, nesting - 1))
-  }
+  const promises = links.map(link => spider(link, nesting - 1))
 
-  return promise
+  return Promise.all(promises)
 }
 
 const spidering = new Set()
@@ -64,5 +62,5 @@ export function spider(url, nesting) {
 
 // 1 读取该文件是否存在，如果不存在就开始下载，如果存在就继续查看其内容
 // 2 下载内容并保存，首先是下载，然后创建文件夹，写入内容，写入保存完毕
-// 3 读取文件内容，获取里面所有的链接，继续重复上述过程（注意这里是顺序执行）
+// 3 读取文件内容，获取里面所有的链接，继续重复上述过程（注意：这里是平行执行）
 // 所有链接均已下载完毕，即是完成
