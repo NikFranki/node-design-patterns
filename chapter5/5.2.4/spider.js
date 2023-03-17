@@ -28,18 +28,19 @@ async function spiderLinks(currentUrl, content, nesting) {
   }
 
   const links = getPageLinks(currentUrl, content)
-  for (const link of links) {
-    await spider(link, nesting - 1)
-  }
+  const promises = links.map((link) => spider(link, nesting - 1))
+
+  return Promise.all(promises)
 }
 
 const spidering = new Set()
+
 export async function spider(url, nesting) {
   if (spidering.has(url)) {
     return Promise.resolve();
   }
-
   spidering.add(url)
+
   const filename = `${__dirname}/${urlToFilename(url)}`
   let content
   try {
@@ -55,5 +56,5 @@ export async function spider(url, nesting) {
   return spiderLinks(url, content, nesting)
 }
 
-// 使用 async awati 重构顺序执行的逻辑
+// 使用 async awati 重构顺序执行的逻辑（不限制平行数）
 
