@@ -1,0 +1,16 @@
+{
+  "name": "chapter8",
+  "version": "1.0.0",
+  "description": "",
+  "main": "blog.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "sqlite3": "^4.1.1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
