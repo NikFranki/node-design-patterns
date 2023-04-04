@@ -6,7 +6,7 @@
   "configurations": [
   {
     "name": "Launch Program",
-    "program": "${workspaceFolder}/chapter9/5-iterator-iterable-matrix/index.js",
+    "program": "${workspaceFolder}/chapter9/9-iterator-matrix-generator/index.js",
     "request": "launch",
     "skipFiles": [
       "<node_internals>/**"
