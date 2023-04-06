@@ -1,9 +1,10 @@
 import nunjucks from 'nunjucks'
 
+const template = '<h1>Hello <i>{{name}}</i></h1>'
+
 export function sayHello(name) {
-  if (typeof __BROWSER__ !== 'undefined') {
+  if (typeof window !== 'undefined' && window.document) {
     // client code
-    const template = '<h1>Hello <i>{{name}}</i></h1>'
     return nunjucks.renderString(template, { name })
   }
 
