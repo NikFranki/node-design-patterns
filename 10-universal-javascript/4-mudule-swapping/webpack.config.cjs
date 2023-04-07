@@ -16,9 +16,10 @@ module.exports = {
   plugins: [
     new webpack.ProgressPlugin(),
     new HtmlWebpackPlugin(),
-    new webpack.DefinePlugin({
-      __BROWSER__: true
-    })
+    new webpack.NormalModuleReplacementPlugin(
+      /src\/say-hello\.js$/,
+      path.resolve(__dirname, 'src', 'say-hello-browser.js')
+    )
   ],
 
   module: {
