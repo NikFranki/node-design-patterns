@@ -1,0 +1,20 @@
+{
+  "name": "4-batching-and-caching",
+  "version": "1.0.0",
+  "description": "",
+  "main": "loadTest.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "level": "^6.0.1",
+    "subleveldown": "^4.1.4",
+    "nanoid": "^2.1.11",
+    "superagent": "^5.2.2"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
