@@ -6,7 +6,7 @@
   "configurations": [
   {
     "name": "Launch Program",
-    "program": "${workspaceFolder}/chapter9/13-middleware-zmq/client.js",
+    "program": "${workspaceFolder}/11-advanced-recipes/8-cpu-bound/index.js",
     "request": "launch",
     "skipFiles": [
       "<node_internals>/**"
