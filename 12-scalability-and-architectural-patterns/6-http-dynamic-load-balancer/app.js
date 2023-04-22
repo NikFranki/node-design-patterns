@@ -39,7 +39,7 @@ async function main() {
 
   const server = createServer((req, res) => {
     let i = 1e7; while (i > 0) { i-- }
-    console.log(`Handing request from ${pid}`)
+    console.log(`Handling request from ${pid}`)
     res.end(`${serviceType} reponse from ${pid}\n`)
   })
 

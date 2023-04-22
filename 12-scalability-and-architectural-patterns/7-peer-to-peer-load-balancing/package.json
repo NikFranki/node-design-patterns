@@ -1,0 +1,16 @@
+{
+  "name": "7-peer-to-peer-load-balancing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "get-stream": "^5.1.0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
