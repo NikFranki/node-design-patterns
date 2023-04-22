@@ -13,7 +13,7 @@ export function balancedRequest(options) {
     options.hostname = servers[i].host
     options.port = servers[i].port
 
-    request(options, () => {
+    request(options, (response) => {
       resolve(getStream(response))
     }).end()
   })

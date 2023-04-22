@@ -2,10 +2,10 @@ import { createServer } from 'http'
 
 const { pid } = process
 
-const server = createServer(() => {
+const server = createServer((req, res) => {
   let i = 1e7; while (i > 0) { i-- }
   console.log(`Handling request from ${pid}`)
-  console.log(`Hello from ${pid}\n`)
+  res.end(`Hello from ${pid}\n`)
 })
 
 const port = parseInt(process.env.PORT || process.argv[2]) || 8080
