@@ -1,0 +1,17 @@
+{
+  "name": "3-http-cluster-resilient",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node app.js",
+    "benchmark": "autocannon -c 200 -d 10 http://localhost:8080"
+  },
+  "devDependencies": {
+    "autocannon": "^4.6.0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
