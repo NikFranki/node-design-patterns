@@ -6,11 +6,11 @@
   "configurations": [
     {
       "name": "Launch Program",
-      "program": "${workspaceFolder}/12-scalability-and-architectural-patterns/7-peer-to-peer-load-balancing/client.js",
+      "program": "${workspaceFolder}/13-message-and-integration-patterns/2-pubsub-chat-redis/index.js",
       "request": "launch",
       "skipFiles": ["<node_internals>/**"],
       "type": "node",
-      "runtimeExecutable": "/Users/franki/.nvm/versions/node/v16.14.2/bin/node"
+      "runtimeExecutable": "/Users/da.liu/.nvm/versions/node/v14.17.1/bin/node",
     }
   ]
 }
